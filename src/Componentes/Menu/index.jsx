@@ -9,7 +9,7 @@ function Menu() {
           <Link to="/">Home</Link>
           <Link to="/Perfil">Perfil</Link>
           <Link to="/Configuracion">Configuracion</Link>
-          <Link to="/Busqueda">Busqueda</Link>
+          <Link to="/Favoritos">Favoritos</Link>
           <Link to="/Contactos">Contactos</Link>
           <Link to="/Estadisticas">Estadisticas</Link>
         </nav>
