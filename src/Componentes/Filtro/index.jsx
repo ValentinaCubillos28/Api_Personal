@@ -9,9 +9,9 @@ function Filtro({ onTipoChange }) {
 
   return (
     <div className="c-filtro">
-      {tipos.map((tipo, index) => (
+      {tipos.map((tipo) => (
         <button
-          key={index}
+          key={tipo.value}
           className="btn-filtro"
           onClick={() => onTipoChange(tipo.value)}
         >
@@ -23,4 +23,6 @@ function Filtro({ onTipoChange }) {
 }
 
 export default Filtro;
+
+
 
