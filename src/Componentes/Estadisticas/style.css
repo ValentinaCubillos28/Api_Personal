@@ -1,0 +1,40 @@
+.estadisticas-container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.usuarios-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.usuario-card {
+  border: 1px solid #bf68f9;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(194, 136, 219, 0.15);
+  width: 150px;
+}
+
+.usuario-card img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.hablar-btn {
+  background-color: #bf68f9;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.hablar-btn:hover {
+  background-color: #8405c3;
+}

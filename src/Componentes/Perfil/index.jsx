@@ -1,47 +1,39 @@
-import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom"; 
+import React, { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
+import { AppContext } from '../../contexto/contexto';
 import './style.css';
 
-function Perfil() {
-  const [datapoke, setDatapoke] = useState(null);
-  const { name } = useParams(); 
-  const [favoritos, setFavoritos] = useState(() => {
-    const favs = localStorage.getItem("favoritos");
-    return favs ? JSON.parse(favs) : [];
-  });
+export default function Perfil() {
+  const { favoritos, setFavoritos } = useContext(AppContext);
+  const { state } = useLocation();
+  const user = state?.user;  // Obtenemos el perfil completo desde el state
 
-  useEffect(() => {
-    const perfiles = JSON.parse(localStorage.getItem("perfiles")) || [];
-    const perfilEncontrado = perfiles.find(p => p.id === name);
-    setDatapoke(perfilEncontrado);
-  }, [name]);
+  if (!user) {
+    return <p>Cargando datos del perfil...</p>;
+  }
 
-  const esFavorito = favoritos.some(p => p.id === datapoke?.id);
+  const esFavorito = favoritos.some(fav => fav.id === user.id);
 
   const toggleFavorito = () => {
-    let nuevosFavoritos;
     if (esFavorito) {
-      nuevosFavoritos = favoritos.filter(p => p.id !== datapoke.id);
+      setFavoritos(favoritos.filter(fav => fav.id !== user.id));
     } else {
-      nuevosFavoritos = [...favoritos, { id: datapoke.id, name: datapoke.name }];
+      // Guardamos la info completa que queremos mostrar en Favoritos
+      setFavoritos([...favoritos, { 
+        id: user.id, 
+        nombre: user.name, 
+        foto: user.foto 
+      }]);
     }
-    setFavoritos(nuevosFavoritos);
-    localStorage.setItem("favoritos", JSON.stringify(nuevosFavoritos));
   };
 
-  if (!datapoke) return <p>Cargando...</p>;
-
   return (
-    <div>
-      <img 
-        src={datapoke.foto} 
-        alt={datapoke.name} 
-        width="200"
-      />
-      <p>{datapoke.name}</p>
-      <p>{datapoke.id}</p>
-      <p>Email: {datapoke.email}</p>
-      <p>Teléfono: {datapoke.telefono}</p>
+    <div className="perfil-container">
+      <img src={user.foto} alt={user.name} width="200" height="200" />
+      <h2>{user.name}</h2>
+      <p>Email: {user.email}</p>
+      <p>Teléfono: {user.telefono}</p>
+      <p>Género: {user.gender}</p>
 
       <button onClick={toggleFavorito}>
         {esFavorito ? '❤️' : '🤍'}
@@ -49,6 +41,3 @@ function Perfil() {
     </div>
   );
 }
-
-export default Perfil;
-

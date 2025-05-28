@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AppProvider } from './contexto/contexto';
 
 import './App.css'
 import Configuracion from './Componentes/Configuracion'
@@ -9,16 +10,20 @@ import Perfil from './Componentes/Perfil'
 import Estadisticas from './Componentes/Estadisticas'
 import Inicio from './Componentes/Inicio'
 import Menu from './Componentes/Menu';
+import Footer from './Componentes/Footer';
 import Favoritos from './Componentes/Favoritos';
 
-function App() {
+export default function App() {
+  const [usuarioSeleccionado, setUsuarioSeleccionado] = useState(null);
 
   return (
 
     <>
+    <AppProvider>
     <Router>
 
       <Menu/>
+      <Footer/>
       
       <Routes>
       <Route path="/" element={<Inicio />} />
@@ -30,9 +35,8 @@ function App() {
       <Route path="/Favoritos" element={<Favoritos />} />
       </Routes>
     </Router>
+    </AppProvider>
   </>
 
   )
 }
-
-export default App

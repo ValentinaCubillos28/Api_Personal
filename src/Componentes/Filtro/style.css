@@ -1,0 +1,36 @@
+.c-filtro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* Aumentamos de 15px a 25px */
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.btn-filtro {
+  background-color: #e9d8fd; /* Lila pastel */
+  color: #2d2d2d; /* Letra negra */
+  border: none;
+  padding: 12px 30px; /* Botón más grande */
+  border-radius: 12px; /* Menos redondeado */
+  font-size: 1.1rem; /* Letra más grande */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-filtro:hover {
+  background-color: #d8b4fe; /* Un lila más intenso */
+  transform: scale(1.05);
+}
+
+.btn-filtro:active {
+  transform: scale(0.98);
+}
+
+.btn-filtro:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #c084fc; /* Anillo de enfoque */
+}

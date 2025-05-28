@@ -1,0 +1,124 @@
+.c-Inicio {
+  padding-top: 80px; /* más espacio para menú */
+  padding-bottom: 80px; /* espacio para footer */
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.c-buscador {
+  display: block;
+  width: 90%;
+  max-width: 420px;
+  margin: 25px auto 30px auto;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  background-color: white;
+  color: #444;
+}
+
+.c-buscador::placeholder {
+  color: #aaa;
+}
+
+.c-buscador:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #4f46e5;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #666;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+.c-Inicio-Perfil {
+  cursor: pointer;
+  flex: 1 1 160px; /* ancho flexible */
+  max-width: 220px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.15);
+  padding: 15px 20px 25px 20px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  user-select: none;
+}
+
+.c-Inicio-Perfil:hover {
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.4);
+  transform: translateY(-8px);
+}
+
+.c-Inicio-Perfil img {
+  border-radius: 50%;
+  max-width: 100px;
+  height: 70px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #bf35f1;
+  background-color: #ede9fe;
+}
+
+.c-Inicio-Perfil p {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2c2c2c;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* 🌐 Media Queries para hacerlo responsive */
+@media (max-width: 768px) {
+  .c-Inicio {
+    gap: 15px;
+  }
+
+  .c-Inicio-Perfil {
+    max-width: 160px;
+    padding: 12px 15px 18px 15px;
+  }
+
+  .c-Inicio-Perfil p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-Inicio {
+    gap: 10px;
+  }
+
+  .c-Inicio-Perfil {
+    max-width: 140px;
+    padding: 10px 12px 15px 12px;
+  }
+
+  .c-Inicio-Perfil img {
+    max-width: 80px;
+    height: 60px;
+  }
+
+  .c-Inicio-Perfil p {
+    font-size: 0.9rem;
+  }
+
+  .c-buscador {
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+}

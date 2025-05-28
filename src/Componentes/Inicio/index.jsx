@@ -63,6 +63,7 @@ function Inicio() {
 
   return (
     <>
+      <br /><br />
       <input
         type="text"
         placeholder="Buscar"
@@ -80,7 +81,7 @@ function Inicio() {
           {resultados.map((perfil, index) => (
             <div
               className='c-Inicio-Perfil'
-              onClick={() => navigate(`/Perfil/${perfil.id}`)}
+              onClick={() => navigate(`/Perfil/${perfil.id}`, { state: { user: perfil } })}
               key={index}
             >
               <img
@@ -100,6 +101,3 @@ function Inicio() {
 }
 
 export default Inicio;
-
-
-
