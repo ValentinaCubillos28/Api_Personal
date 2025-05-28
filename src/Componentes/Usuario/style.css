@@ -1,5 +1,5 @@
 .usuario-container {
-  max-width: 600px;
+  width: 600px;
   margin: 2rem auto;
   padding: 1.5rem 2rem;
   background: #fff;
@@ -11,7 +11,7 @@
 
 .usuario-container h2,
 .usuario-container h3 {
-  color: #4f46e5;
+  color: #a955e4;
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -42,15 +42,15 @@
 .usuario-container input[type="email"]:focus,
 .usuario-container input[type="date"]:focus,
 .usuario-container input[type="tel"]:focus {
-  border-color: #4f46e5;
+  border-color: #a955e4;
   outline: none;
 }
 
 .usuario-container button {
-  background-color: #6b46c1; /* púrpura */
+  background-color: #a955e4;
   color: white;
   border: none;
-  padding: 12px 25px;
+  padding: 15px 30px;
   border-radius: 30px;
   font-weight: 700;
   font-size: 1rem;
@@ -60,7 +60,7 @@
 }
 
 .usuario-container button:hover {
-  background-color: #553c9a;
+  background-color: #a955e4;
 }
 
 .usuario-container hr {
@@ -100,8 +100,8 @@
 }
 
 .usuario-container ul li button {
-  background-color: #e53e3e; /* rojo para eliminar */
-  padding: 8px 15px;
+  background-color: #a955e4; 
+  padding: 10px 20px;
   font-size: 0.9rem;
   border-radius: 25px;
   width: 100%;
@@ -110,5 +110,5 @@
 }
 
 .usuario-container ul li button:hover {
-  background-color: #9b2c2c;
+  background-color: #a955e4;
 }

@@ -1,8 +1,19 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css o index.css */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app-content {
+  padding-top: 100px; /* o el alto de tu menú */
+  padding-bottom: 60px; /* para no tapar con el footer */
+  min-height: calc(100vh - 140px); /* ajusta según el tamaño de tu menú y footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  justify-content: flex-start; /* empieza desde arriba */
+  width: 100%;
 }
 
 .logo {

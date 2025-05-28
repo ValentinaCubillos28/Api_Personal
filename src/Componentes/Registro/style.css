@@ -49,11 +49,11 @@ html, body {
 }
 
 .registro-input:focus {
-  border-color: #da0303;
+  border-color: #a955e4;
 }
 
 .registro-button, .registro-login-button {
-  background-color: #da0303;
+  background-color: #a955e4;
   color: white;
   padding: 0.9rem;
   border: none;
@@ -64,7 +64,7 @@ html, body {
 }
 
 .registro-button:hover, .registro-login-button:hover {
-  background-color: #da0303;
+  background-color: #a955e4;
 }
 
 .registro-text {

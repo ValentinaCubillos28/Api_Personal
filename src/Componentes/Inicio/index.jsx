@@ -63,16 +63,14 @@ function Inicio() {
   }
 
   return (
-    <>
-      <br /><br />
+    <>  
       <input
         type="text"
         placeholder="Buscar"
         value={busqueda}
         onChange={(e) => setBusqueda(e.target.value)}
         className="c-buscador"
-      /><br></br>
-
+      />
       <Filtro onTipoChange={handleTipoChange} />
 
       {loading ? (

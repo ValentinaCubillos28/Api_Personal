@@ -38,11 +38,12 @@ function App() {
     <AppProvider>
       <Router>
         {usuario && <Menu />}
+        <div className="app-content">
         <Routes>
 
           <Route path="/" element={usuario ? <Inicio /> : <Navigate to="/login" />} />
           <Route path="/Perfil/:name" element={usuario ? <Perfil /> : <Navigate to="/login" />} />
-          <Route path="/Usuario/:name" element={usuario ? <Usuario /> : <Navigate to="/login" />} />
+          <Route path="/Usuario/" element={usuario ? <Usuario /> : <Navigate to="/login" />} />
           <Route path="/Contactos" element={usuario ? <Contactos /> : <Navigate to="/login" />} />
           <Route path="/Estadisticas" element={usuario ? <Estadisticas /> : <Navigate to="/login" />} />
           <Route path="/Favoritos" element={usuario ? <Favoritos /> : <Navigate to="/login" />} />
@@ -50,6 +51,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Registro" element={<Registro />} />
         </Routes>
+        </div>
 
         {usuario && <Footer />}
       </Router>
