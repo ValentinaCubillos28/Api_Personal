@@ -17,7 +17,7 @@ export default function Favoritos() {
         <div
           key={user.id}
           className="c-favorito"
-          onClick={() => navigate(`/Perfil/${user.id}`)}
+          onClick={() => navigate(`/Perfil/${user.id}`, { state: { user } })}
         >
           <img src={user.foto} alt={`Perfil ${user.nombre}`} width="auto" height="60" loading="lazy" />
           <p>{user.nombre}</p>

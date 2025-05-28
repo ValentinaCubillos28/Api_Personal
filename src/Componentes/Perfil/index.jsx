@@ -9,35 +9,39 @@ export default function Perfil() {
   const user = state?.user;  // Obtenemos el perfil completo desde el state
 
   if (!user) {
-    return <p>Cargando datos del perfil...</p>;
+    return <p className="cargando">Cargando datos del perfil...</p>;
   }
 
   const esFavorito = favoritos.some(fav => fav.id === user.id);
 
-  const toggleFavorito = () => {
-    if (esFavorito) {
-      setFavoritos(favoritos.filter(fav => fav.id !== user.id));
-    } else {
-      // Guardamos la info completa que queremos mostrar en Favoritos
-      setFavoritos([...favoritos, { 
-        id: user.id, 
-        nombre: user.name, 
-        foto: user.foto 
-      }]);
-    }
-  };
+const toggleFavorito = () => {
+  if (esFavorito) {
+    setFavoritos(favoritos.filter(fav => fav.id !== user.id));
+  } else {
+    setFavoritos([...favoritos, {
+      id: user.id,
+      nombre: user.name,
+      foto: user.foto,
+      email: user.email,
+      telefono: user.telefono,
+      gender: user.gender
+    }]);
+  }
+};
 
   return (
     <div className="perfil-container">
-      <img src={user.foto} alt={user.name} width="200" height="200" />
-      <h2>{user.name}</h2>
-      <p>Email: {user.email}</p>
-      <p>Teléfono: {user.telefono}</p>
-      <p>Género: {user.gender}</p>
+      <div className="perfil-card">
+        <img src={user.foto} alt={user.name} className="perfil-foto" />
+       <h2>{user.nombre || user.name}</h2>
+{user.email && <p>Email: {user.email}</p>}
+{user.telefono && <p>Teléfono: {user.telefono}</p>}
+{user.gender && <p>Género: {user.gender}</p>}
 
-      <button onClick={toggleFavorito}>
-        {esFavorito ? '❤️' : '🤍'}
-      </button>
+        <button onClick={toggleFavorito} className="btn-favorito">
+          {esFavorito ? '❤️' : '🤍'}
+        </button>
+      </div>
     </div>
   );
 }

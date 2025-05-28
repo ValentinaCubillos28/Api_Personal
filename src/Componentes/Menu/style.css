@@ -28,3 +28,11 @@
   transform: translateY(-2px); 
 }
 
+@media (max-width: 768px) {
+  .c-menu {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}

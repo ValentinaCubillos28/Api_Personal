@@ -15,3 +15,11 @@
   box-shadow: 0 -3px 8px rgba(177, 174, 246, 0.4);
   z-index: 1000; /* Para asegurarte que queda encima del contenido */
 }
+@media (max-width: 768px) {
+  .c-menu {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}

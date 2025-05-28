@@ -1,0 +1,85 @@
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 1rem;
+}
+
+.perfil-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.perfil-card:hover {
+  transform: scale(1.02);
+}
+
+.perfil-foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #cf77f8;
+}
+
+.perfil-card h2 {
+  margin: 0.5rem 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.perfil-card p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn-favorito {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #d095f8;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-favorito:hover {
+  background: #bf68f9;
+}
+
+.cargando {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .perfil-card {
+    padding: 1.5rem;
+  }
+
+  .perfil-foto {
+    width: 120px;
+    height: 120px;
+  }
+
+  .perfil-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .perfil-card p {
+    font-size: 0.9rem;
+  }
+}
