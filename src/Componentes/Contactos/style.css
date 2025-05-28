@@ -74,4 +74,36 @@
   margin: 10px auto;
   display: block;
 }
+@media (max-width: 480px) {
+  .chat-container {
+    max-width: 95%;
+    margin: 1rem auto;
+    padding: 0.8rem;
+  }
 
+  .chat-box {
+    height: 250px;
+    padding: 0.4rem;
+  }
+
+  .mensaje {
+    max-width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .chat-input {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  .chat-button {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .avatar-usuario {
+    width: 60px;
+    height: 60px;
+    margin: 8px auto;
+  }
+}

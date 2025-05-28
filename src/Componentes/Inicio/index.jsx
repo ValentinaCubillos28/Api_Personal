@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import './style.css';
@@ -53,7 +54,7 @@ function Inicio() {
     resultados = data.filter(perfil =>
       perfil.name.toLowerCase().includes(busqueda.toLowerCase())
     );
-  }
+  }<br></br>
 
   if (!isNaN(busqueda)) {
     resultados = data.filter(perfil =>
@@ -70,7 +71,7 @@ function Inicio() {
         value={busqueda}
         onChange={(e) => setBusqueda(e.target.value)}
         className="c-buscador"
-      />
+      /><br></br>
 
       <Filtro onTipoChange={handleTipoChange} />
 
