@@ -1,0 +1,90 @@
+/* style.css */
+.configuracion-page .configuracion-container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.configuracion-page .configuracion-container h2 {
+  font-size: 1.8rem;
+  color: #0a090a;
+  margin-bottom: 1rem;
+}
+
+.configuracion-page .perfil-card {
+  border: 1px solid #bf68f9;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: rgba(194, 136, 219, 0.15);
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.configuracion-page .perfil-card img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #bf68f9;
+  margin-bottom: 0.5rem;
+}
+
+.configuracion-page .perfil-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #bf68f9;
+}
+
+.configuracion-page .perfil-card p {
+  margin: 0.3rem 0;
+}
+
+.configuracion-page .barra-compatibilidad {
+  margin: 1rem auto;
+  width: 80%;
+  background-color: #eee;
+  border-radius: 8px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.configuracion-page .barra-llena {
+  height: 100%;
+  background-color: #bf68f9;
+  transition: width 0.5s ease;
+}
+
+.configuracion-page .porcentaje-texto {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #8405c3;
+}
+
+.configuracion-page .mensaje-error {
+  text-align: center;
+  margin-top: 2rem;
+  color: #bf68f9;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .configuracion-page .perfil-card {
+    width: 80%;
+    padding: 0.8rem;
+  }
+
+  .configuracion-page .perfil-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .configuracion-page .perfil-card h3 {
+    font-size: 1rem;
+  }
+
+  .configuracion-page .barra-compatibilidad {
+    width: 90%;
+    height: 15px;
+  }
+}

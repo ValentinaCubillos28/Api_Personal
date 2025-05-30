@@ -1,4 +1,4 @@
-.c-menu {
+.menu-container .c-menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,22 +17,25 @@
   z-index: 1000;
 }
 
-.c-menu a {
+.menu-container .c-menu a {
   text-decoration: none; /* Sin subrayado */
   color: #2d2d2d; /* Letra negra */
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.c-menu a:hover {
+.menu-container .c-menu a:hover {
   color: #6b21a8; 
   transform: translateY(-2px); 
 }
 
 @media (max-width: 768px) {
-  .c-menu {
-    flex-direction: column;
-    gap: 15px;
+  .menu-container .c-menu {
+    /* Mantener fila, solo reducir tamaño y ajustar gap */
+    flex-direction: row; /* <-- importante */
+    gap: 10px; /* menos separación para que no se vean muy separados */
     padding: 15px 0;
-    font-size: 1rem;
+    font-size: 0.85rem; /* tamaño más pequeño */
+    flex-wrap: wrap; /* si no caben que hagan wrap a la siguiente línea */
+    justify-content: center; /* centrado horizontal */
   }
 }

@@ -9,6 +9,9 @@ export function AppProvider({ children }) {
   const [data, setData] = useState([]);
   const [tipoSeleccionado, setTipoSeleccionado] = useState('all');
 
+  // Nuevo: Estado para guardar el usuario seleccionado (para Configuracion)
+  const [usuarioSeleccionado, setUsuarioSeleccionado] = useState(null);
+
   useEffect(() => {
     const obtenerDatos = async () => {
       const url = tipoSeleccionado === 'all'
@@ -74,7 +77,9 @@ export function AppProvider({ children }) {
       data,
       setData,
       tipoSeleccionado,
-      setTipoSeleccionado
+      setTipoSeleccionado,
+      usuarioSeleccionado,      // 🔥 Nuevo: para Configuracion.jsx
+      setUsuarioSeleccionado,   // 🔥 Nuevo: para Configuracion.jsx
     }}>
       {children}
     </AppContext.Provider>

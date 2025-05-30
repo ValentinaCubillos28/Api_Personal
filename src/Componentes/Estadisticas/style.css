@@ -1,16 +1,16 @@
-.estadisticas-container {
+.estadisticas-page .estadisticas-container {
   text-align: center;
   padding: 1rem;
 }
 
-.usuarios-lista {
+.estadisticas-page .usuarios-lista {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
 
-.usuario-card {
+.estadisticas-page .usuario-card {
   border: 1px solid #bf68f9;
   border-radius: 8px;
   padding: 1rem;
@@ -19,41 +19,62 @@
   width: 150px;
 }
 
-.usuario-card img {
+.estadisticas-page .usuario-card img {
   border-radius: 50%;
   width: 60px;
   height: 60px;
 }
 
-.hablar-btn {
-  background-color: #bf68f9;
-  color: white;
+/* Botones con estilo mejorado */
+.estadisticas-page .hablar-btn,
+.estadisticas-page .ver-perfil-btn {
+  background: linear-gradient(135deg, #d3a8ef, #c27cf4);
+  color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
   margin-top: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.hablar-btn:hover {
-  background-color: #8405c3;
+.estadisticas-page .hablar-btn:hover,
+.estadisticas-page .ver-perfil-btn:hover {
+  background: linear-gradient(135deg, #c480f5, #8405c3);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* Botón Ver Perfil con colores personalizados */
+.estadisticas-page .ver-perfil-btn {
+  background: linear-gradient(135deg, #bb4df3, #ac24f0);
+}
+
+.estadisticas-page .ver-perfil-btn:hover {
+  background: linear-gradient(135deg, #8005bd, #aa63d9);
+}
+
+/* Responsive */
 @media (max-width: 480px) {
-  .usuarios-lista {
+  .estadisticas-page .usuarios-lista {
     gap: 0.5rem;
   }
 
-  .usuario-card {
+  .estadisticas-page .usuario-card {
     width: 45vw; 
     padding: 0.8rem;
   }
 
-  .usuario-card img {
+  .estadisticas-page .usuario-card img {
     width: 50px;
     height: 50px;
   }
 
-  .hablar-btn {
+  .estadisticas-page .hablar-btn,
+  .estadisticas-page .ver-perfil-btn {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
   }

@@ -107,7 +107,7 @@ function Registro() {
         {error && <p className="registro-error">{error}</p>}
         <p className="registro-text">¿Ya tienes una cuenta?</p>
         <button className="registro-login-button" onClick={() => navigate(`/login`)}>
-          Login
+          Iniciar Sesión
         </button>
       </div>
     </div>

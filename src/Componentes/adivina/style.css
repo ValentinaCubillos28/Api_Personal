@@ -1,0 +1,154 @@
+.adivina-quien {
+  max-width: 500px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.instruccion {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.botones-preguntas {
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-pregunta {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #cd80f4;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.btn-pregunta:hover:not(:disabled) {
+  background-color: #a329e0;
+}
+
+.btn-pregunta:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.mensaje-respuesta {
+  font-weight: 600;
+  min-height: 28px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.historial-preguntas {
+  margin-bottom: 1rem;
+}
+
+.historial-preguntas ul {
+  padding-left: 1.2rem;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 0.3rem;
+}
+
+.lista-usuarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.usuario-card {
+  border: 2px solid #bf68f9;
+  border-radius: 12px;
+  padding: 8px;
+  width: 120px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  background-color: rgba(194, 136, 219, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.usuario-card:hover {
+  transform: scale(1.05);
+}
+
+.usuario-card.deshabilitado {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.7;
+  transform: none !important;
+}
+
+.usuario-foto {
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.usuario-nombre {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.resultado-juego {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mensaje-resultado {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.mensaje-resultado.ganaste {
+  color: #0f9d58;
+}
+
+.mensaje-resultado.perdiste {
+  color: #db4437;
+}
+
+.btn-reiniciar {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #a657e7;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reiniciar:hover {
+  background-color: #971cd4;
+}
+
+/* Responsividad */
+
+@media (max-width: 480px) {
+  .btn-pregunta {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .usuario-card {
+    width: 45%;
+  }
+}

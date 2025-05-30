@@ -13,9 +13,11 @@ export default function Usuario() {
   });
   const [nuevaUrl, setNuevaUrl] = useState("");
   const [imagenes, setImagenes] = useState([]);
+  const [loading, setLoading] = useState(true);  // Estado para carga inicial
 
   useEffect(() => {
     async function fetchUsuario() {
+      setLoading(true);
       const { data: { user } } = await supabase.auth.getUser();
       if (user) {
         const { data, error } = await supabase
@@ -26,9 +28,10 @@ export default function Usuario() {
         if (data) {
           setUsuario(data);
           setForm(data);
-          fetchImagenes(user.id);
+          await fetchImagenes(user.id);
         }
       }
+      setLoading(false);
     }
     fetchUsuario();
   }, []);
@@ -77,13 +80,12 @@ export default function Usuario() {
     }
   };
 
-  // cerrar sesión
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    // Aquí tendrías que manejar el estado global o redireccionar según tu app
+    // manejar estado global o redireccionar según app
   };
 
-  if (!usuario) return <p>Cargando...</p>;
+  if (loading) return <p>Cargando...</p>;
 
   return (
     <div className="usuario-container">
@@ -167,12 +169,7 @@ export default function Usuario() {
       <h2>Quiero cerrar sesión</h2>
       <button onClick={handleLogout}>Cerrar sesión</button>
 
-      {/* Espacio para que no tape menú */}
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <br /><br /><br /><br /><br />
     </div>
   );
 }

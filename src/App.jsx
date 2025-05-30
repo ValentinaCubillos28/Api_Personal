@@ -14,6 +14,8 @@ import Favoritos from './Componentes/Favoritos';
 import Login from './Componentes/Login';
 import Registro from './Componentes/Registro';
 import Usuario from './Componentes/Usuario';
+import Configuracion from './Componentes/Configuracion';
+import AdivinaQuien from './Componentes/adivina';
 
 function App() {
   const [usuario, setUsuario] = useState(null);
@@ -47,7 +49,8 @@ function App() {
           <Route path="/Contactos" element={usuario ? <Contactos /> : <Navigate to="/login" />} />
           <Route path="/Estadisticas" element={usuario ? <Estadisticas /> : <Navigate to="/login" />} />
           <Route path="/Favoritos" element={usuario ? <Favoritos /> : <Navigate to="/login" />} />
-
+          <Route path="/Configuracion" element={usuario ? <Configuracion /> : <Navigate to="/login" />} />
+          <Route path="/adivina" element={usuario ? <AdivinaQuien /> : <Navigate to="/login" />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registro" element={<Registro />} />
         </Routes>
